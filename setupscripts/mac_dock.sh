@@ -7,15 +7,13 @@ OLDIFS=$IFS
 IFS=''
 
 apps=(
-    Finder
     Firefox
     'Sublime Text'
+    'Visual Studio Code'
     iTerm
     Postman
-    PyCharm
     Spotify
     'Sequel Pro'
-    Postico
     'App Store'
     'System Preferences'
 )
