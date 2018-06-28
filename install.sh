@@ -165,11 +165,11 @@ if [ "$OS" = "linux" ]; then
     fi
     
     if [[ -x $(which yum) ]]; then
-
+        echo "Yum not supported yet"
     fi
 
     if [[ -x $(which pacman) ]]; then
-
+        echo "Arch is not supported yet"
     fi
 fi
 

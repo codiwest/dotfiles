@@ -14,8 +14,8 @@ fi
 # Make sure we’re using the latest Homebrew
 brew update
 # Upgrade any already-installed formulae
-brew tap homebrew/versions
-brew upgrade --all
+# brew tap homebrew/versions
+brew upgrade
 
 apps=(
     bash

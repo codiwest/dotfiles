@@ -30,5 +30,5 @@ compinit
 
 unset config_files
 
-source $HOME/.dotfiles/bin/z
+# source $HOME/.dotfiles/bin/z
 source $HOME/.zshrc.local
