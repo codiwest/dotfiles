@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Assumes dockutil is installed via homebrew
 
 # Set Dock items

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Author: Codi West
 # Last Updated: 6/27/18
 
