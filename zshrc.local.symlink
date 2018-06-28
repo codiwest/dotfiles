@@ -1,0 +1,26 @@
+# base16 shell
+# https://github.com/chriskempson/base16-shell
+BASE16_SHELL=$HOME/.base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+
+# fzf
+# brew install fzf
+# To install useful key bindings and fuzzy completion:
+# $(brew --prefix)/opt/fzf/install
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+_has() {
+  return $( whence $1 >/dev/null )
+}
+
+if _has fzf && _has ag; then
+  export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_DEFAULT_OPTS='
+  --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+  --color info:108,prompt:109,spinner:108,pointer:168,marker:168
+  '
+fi

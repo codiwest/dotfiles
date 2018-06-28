@@ -1,0 +1,26 @@
+# https://github.com/tmux-plugins/tpm
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-open'
+set -g @plugin 'tmux-plugins/tmux-sidebar'
+
+# tmux-continuum
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-restore 'on'
+set -g @continuum-boot 'on'
+set -g @continuum-boot-options 'iterm,fullscreen'
+set -g @resurrect-strategy-vim 'session'
+
+# Plugin configs
+set -g @resurrect-strategy-vim 'session'
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-boot 'on'
+set -g @continuum-boot-options 'iterm'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'

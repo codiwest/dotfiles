@@ -1,0 +1,179 @@
+"
+" https://statico.github.io/vim3.html
+
+" keyboard shortcuts
+let mapleader = ','
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <leader>l :Align
+nnoremap <leader>a :Ag<space>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
+nnoremap <leader>g :GitGutterToggle<CR>
+noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+" Uses incsearch plugin
+map /  <Plug>(incsearch-forward)
+nmap <leader>. :TagbarToggle<CR>
+" jk to escape
+imap jk <Esc>
+
+" Replacement for Ctrl-P
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+
+" Quick tabs
+nnoremap <Leader>b$  :TabooRename<Space>
+nnoremap <Leader>bd  :tabclose<CR>
+nnoremap <Leader>c  :tabnew<CR>
+
+" Neosnippet
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" neocomplete tab select
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Show dotfiles in nerdtree
+let NERDTreeShowHidden=1
+
+let g:multi_cursor_exit_from_insert_mode='0'
+let g:multi_cursor_exit_from_visual_mode='0'
+
+" brew tap universal-ctags/universal-ctags
+" brew install --HEAD universal-ctags
+"
+" NOTE:
+" <C-]>
+" :tag function_name
+" :ts or :tselect shows the list
+" :tn or :tnext goes to the next tag in that list
+" :tp or :tprev goes to the previous tag in that list
+" :tf or :tfirst goes to the first tag of the list
+" :tl or :tlast goes to the last tag of the list
+
+" CtrlP fuzzy ignore
+" set wildignore+=*/tmp/*,*/app.css,*/app.min.css,*/app.js,*/app.min.js
+
+" let g:ag_prg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore "./assets/css/app.css"'
+
+let g:jsx_ext_required = 0
+
+let g:neocomplete#enable_at_startup = 1
+
+" Prettier JavaScript formatting enable via visual selection gq
+" yarn global add prettier
+autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin
+
+set tags=./tags;
+
+" neocomplete no conflict with multi cursors
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
+
+" tern
+"
+autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+vnoremap . :norm.<CR>
+
+" base16 shell integration
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Taboo
+let g:taboo_tab_format = '%N%f'
+
+" ALE config
+" https://vimawesome.com/plugin/ale#1-supported-languages-and-tools
+
+" Javascript
+" --------------------
+" https://github.com/prettier/prettier#usage
+" https://eslint.org/docs/user-guide/getting-started#installation-and-usage
+
+" Ruby
+" --------------------
+" gem install rails_best_practices
+" gem install reek
+" gem install rubocop
+
+" Slim
+" --------------------
+" gem install slim_lint
+
+" SCSS
+" --------------------
+" https://github.com/prettier/prettier#usage
+" stylelint
+" yarn add stylelint-config-sass-guidelines && \
+" echo '{"extends": "stylelint-config-sass-guidelines"}' > .stylelintrc.json
+
+" PHP
+" --------------------
+" https://github.com/squizlabs/PHP_CodeSniffer#installation
+" Custom rule that uses tabs
+" phpcs --config-set default_standard ~/.wpcs/WordPress/ruleset-custom.xml
+
+" Dockerfile
+" --------------------
+" https://github.com/lukasmartinelli/hadolint#install
+
+" Shell
+" --------------------
+" https://github.com/koalaman/shellcheck#installing
+
+" Html
+" --------------------
+" https://github.com/yaniswang/HTMLHint#quick-start
+" http://www.html-tidy.org/#homepage19700601get_tidy
+
+" Make
+" --------------------
+" https://github.com/mrtazz/checkmake#installation
+
+" Markdown
+" --------------------
+" https://github.com/markdownlint/markdownlint
+
+" Autoformat FTW!!
+nnoremap <Leader>f  :ALEFix<CR>
+
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✗'
+" phpcs is in the $PATH
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['json'] = ['prettier']
+let g:ale_fixers['scss'] = ['stylelint']
+let g:ale_fixers['ruby'] = ['rubocop']
+" let g:ale_fixers['html'] = ['tidy']
+let g:ale_ruby_rubocop_options = '-a'
+let g:ale_fixers['php'] = ['phpcbf']
+let g:ale_php_phpcs_use_global = 1
+let g:ale_php_phpcs_standard = 'Wordpress'
+
+
