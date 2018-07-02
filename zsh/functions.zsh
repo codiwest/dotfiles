@@ -83,6 +83,11 @@ install-nvm() {
   nvm use node
 }
 
+# From JB
+ide () {
+  docker run -it --rm -w $(pwd) -v $(pwd):$(pwd) -v /var/run/docker.sock:/var/run/docker.sock --group-add 988 --hostname ide jasonben/ide $@
+}
+
 # Linux
 install-yarn() {
   sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg

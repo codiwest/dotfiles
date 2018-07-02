@@ -11,9 +11,12 @@ apps=(
     'Sublime Text'
     'Visual Studio Code'
     iTerm
+    Anaconda-Navigator
     Postman
     Spotify
     'Sequel Pro'
+    Synergy
+    TeamViewer
     'App Store'
     'System Preferences'
 )
