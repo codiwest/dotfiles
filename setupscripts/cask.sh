@@ -9,7 +9,6 @@ brew tap homebrew/cask
 CASKS=(
     anaconda
     docker
-    double-commander
     firefox
     iterm2
     onedrive
