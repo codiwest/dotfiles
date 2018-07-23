@@ -7,6 +7,7 @@ OLDIFS=$IFS
 IFS=''
 
 apps=(
+    ForkLift
     Firefox
     'Sublime Text'
     'Visual Studio Code'
@@ -16,6 +17,10 @@ apps=(
     Spotify
     'Sequel Pro'
     Synergy
+    'Microsoft OneNote'
+    Discord
+    Signal
+    Arduino
     TeamViewer
     'App Store'
     'System Preferences'

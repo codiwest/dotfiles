@@ -8,13 +8,17 @@ brew tap homebrew/cask
 
 CASKS=(
     anaconda
+    arduino
+    discord
     docker
     firefox
+    forklift
     iterm2
     onedrive
     postico
     postman
     scroll-reverser
+    sensiblesidebuttons
     sequel-pro
     shiftit
     signal
