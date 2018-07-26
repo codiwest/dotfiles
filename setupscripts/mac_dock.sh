@@ -22,6 +22,8 @@ apps=(
     Signal
     Arduino
     TeamViewer
+    texstudio
+    Zotero
     'App Store'
     'System Preferences'
 )

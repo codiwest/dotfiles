@@ -28,6 +28,7 @@ CASKS=(
     texstudio
     tunnelblick
     visual-studio-code
+    zotero
 )
 
 echo “Installing cask apps...”
