@@ -7,6 +7,7 @@ apps=(
     git
     nvidia
     nvidia-settings
+    vim
     virtualbox
     wget
     yaourt

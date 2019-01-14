@@ -4,7 +4,7 @@ OS=`echo $(uname) | tr '[:upper:]' '[:lower:]'`
 DOTFILES_DIR="$HOME/.dotfiles"
 
 echo "OS: $OS"
-echo "DIR: $DOTFILES"
+echo "DIR: $DOTFILES_DIR"
 
 # DOTFILES="aliases gdbinit gitconfig gitignore i3 polybar rofi screenrc vimrc xinitrc xmodmaprc Xresources Xresources.d zshenv zshrc zsh"
 # DOTFILES="git/gitconfig git/gitignore vim/vimrc zshrc zshrc.local zsh/base16-shell"
@@ -171,6 +171,8 @@ if [ "$OS" = "linux" ]; then
     if [[ -x $(which pacman) ]]; then
         sudo -v
         $DOTFILES_DIR/setupscripts/pacman.sh
+        install_oh_my_zsh
+        install_dotfiles
     fi
 fi
 
