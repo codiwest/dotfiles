@@ -169,7 +169,8 @@ if [ "$OS" = "linux" ]; then
     fi
 
     if [[ -x $(which pacman) ]]; then
-        echo "Arch is not supported yet"
+        sudo -v
+        $DOTFILES_DIR/setupscripts/pacman.sh
     fi
 fi
 

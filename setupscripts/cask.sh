@@ -8,6 +8,7 @@ brew tap homebrew/cask
 
 CASKS=(
     anaconda
+    db-browser-for-sqlite
     docker
     double-commander
     firefox

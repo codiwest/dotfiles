@@ -9,10 +9,10 @@ apps=(
     gcc
     git
     grep
+    neofetch
     nmap
     openssh
     screen
-    screenfetch
     tmux
     vim --with-override-system-vi
     wget
