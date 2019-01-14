@@ -7,13 +7,23 @@ OLDIFS=$IFS
 IFS=''
 
 apps=(
+    ForkLift
     Firefox
     'Sublime Text'
     'Visual Studio Code'
     iTerm
+    Anaconda-Navigator
     Postman
     Spotify
     'Sequel Pro'
+    Synergy
+    'Microsoft OneNote'
+    Discord
+    Signal
+    Arduino
+    TeamViewer
+    texstudio
+    Zotero
     'App Store'
     'System Preferences'
 )

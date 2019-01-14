@@ -9,14 +9,17 @@ brew tap homebrew/cask
 CASKS=(
     anaconda
     db-browser-for-sqlite
+    arduino
+    discord
     docker
-    double-commander
     firefox
+    forklift
     iterm2
     onedrive
     postico
     postman
     scroll-reverser
+    sensiblesidebuttons
     sequel-pro
     shiftit
     signal
@@ -26,6 +29,7 @@ CASKS=(
     texstudio
     tunnelblick
     visual-studio-code
+    zotero
 )
 
 echo “Installing cask apps...”

@@ -18,7 +18,6 @@ alias glances="docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --pid 
 alias clear_cache="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
 alias c="clear"
-alias code="cd ~/code"
 alias dots="cd ~/.dotfiles && vi"
 alias ssh_alias="vim ~/.ssh/config"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
