@@ -7,28 +7,41 @@ echo “Installing cask...”
 brew tap homebrew/cask
 
 CASKS=(
+    alacritty
+    alfred
     anaconda
+    balenaetcher
     db-browser-for-sqlite
-    arduino
     discord
     docker
     firefox
     forklift
     iterm2
+    mactex
     onedrive
+    openrefine
+    pgadmin4
     postico
     postman
+    remote-desktop-connection
+    robo-3t
+    rstudio
     scroll-reverser
     sensiblesidebuttons
     sequel-pro
     shiftit
     signal
+    slack
     spotify
     sublime-text
-    teamviewer
+    #teamviewer
     texstudio
+    the-unarchiver
+    trillium-notes
     tunnelblick
+    ultimaker-cura
     visual-studio-code
+    xquartz
     zotero
 )
 

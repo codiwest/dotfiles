@@ -8,7 +8,7 @@ apps=(
     nvidia
     nvidia-settings
     vim
-    virtualbox
+    # virtualbox
     wget
     yaourt
     zsh

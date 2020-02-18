@@ -31,6 +31,8 @@ apps=(
     grep
     nmap
     openssh
+    p7zip
+    ranger
     screen
     screenfetch
     tmux

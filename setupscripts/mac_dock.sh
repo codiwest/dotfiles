@@ -11,6 +11,7 @@ apps=(
     Firefox
     'Sublime Text'
     'Visual Studio Code'
+    Alacritty
     iTerm
     Anaconda-Navigator
     Postman
@@ -20,12 +21,18 @@ apps=(
     'Microsoft OneNote'
     Discord
     Signal
-    Arduino
-    TeamViewer
-    texstudio
+    Slack
+    # Arduino
+    # TeamViewer
+    # texstudio
     Zotero
+    RStudio
+    CSView
+    'Trillium Notes'
+    'Microsoft Remote Desktop'
     'App Store'
     'System Preferences'
+    'Activity Monitor'
 )
 
 dockutil --no-restart --remove all $HOME
